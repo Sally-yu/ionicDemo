@@ -32,6 +32,8 @@
               }
             ],
             "styles": [
+              "node_modules/jqwidgets-scripts/jqwidgets/styles/jqx.base.css",
+              "node_modules/jqwidgets-scripts/jqwidgets/styles/jqx.dark.css",
               {
                 "input": "src/theme/variables.scss"
               },
