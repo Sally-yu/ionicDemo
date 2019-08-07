@@ -1,16 +1,12 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      通知
+      通讯录
     </ion-title>
+    <ion-icon name="more" class="bar-btn" slot="end" (click)="presentPopover($event)"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
-  <jqxBarGauge
-           [max]="150"
-          [colorScheme]="'scheme02'" [values]="values">
-  </jqxBarGauge>
 
 </ion-content>

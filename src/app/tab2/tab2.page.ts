@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {PopoverPage} from './popover/popover.page';
+import {PopoverController} from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -7,13 +9,21 @@ import {Component, OnInit} from '@angular/core';
 })
 export class Tab2Page implements OnInit{
 
-  values: number[] = [102, 115, 130, 137];
 
-  constructor() {}
+  constructor(
+      private popoverController:PopoverController
+  ) {}
 
   ngOnInit(): void {
 
   }
 
-
+  async presentPopover(ev: any) {
+    const popover = await this.popoverController.create({
+      component: PopoverPage,
+      event: ev,
+      translucent: true
+    });
+    return await popover.present();
+  }
 }

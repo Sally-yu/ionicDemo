@@ -38,10 +38,6 @@ export class TabsPage implements OnInit {
     }
 
     ngOnInit(): void {
-        var cookie = document.cookie;
-        if (!cookie || cookie != 'demouser') {
-            this.router.navigate(['/login']);
-        }
         this.platform.backButton.subscribe(() => {
             this.tabsCanGoBack = this.tabs.outlet.canGoBack();
             this.tabsParentCanGoBack = this.tabs.outlet.parentOutlet.canGoBack();

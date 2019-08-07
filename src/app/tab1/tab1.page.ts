@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import {PopoverController} from '@ionic/angular';
+import {PopoverPage} from './popover/popover.page';
 
 @Component({
     selector: 'app-tab1',
@@ -10,8 +12,8 @@ export class Tab1Page {
     grid = [
         {
             group: '财务分析', children: [
-                [{url: '', title: '营业收入', img: 'u12'},
-                    {url: '', title: '利润', img: 'u32'},
+                [{url: 'demo1', title: '营业收入', img: 'u12'},
+                    {url: 'demo2', title: '利润', img: 'u32'},
                     {url: '', title: '新签合同', img: 'u16'},
                     {url: '', title: '两金', img: 'u28'},],
                 [{url: '', title: '经营现金净流量', img: 'u18'},
@@ -69,7 +71,18 @@ export class Tab1Page {
 
     ];
 
-    constructor() {
+    constructor(
+        private popoverController:PopoverController
+    ) {
+    }
+
+    async presentPopover(ev: any) {
+        const popover = await this.popoverController.create({
+            component: PopoverPage,
+            event: ev,
+            translucent: true
+        });
+        return await popover.present();
     }
 
 

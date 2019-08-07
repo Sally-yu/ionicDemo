@@ -12,12 +12,14 @@ import {FormsModule} from '@angular/forms';
 import {LoginPage} from './login/login.page';
 import { AppMinimize } from '@ionic-native/app-minimize/ngx';
 import { HttpClientModule} from '@angular/common/http';
+import {IonicStorageModule} from '@ionic/storage';
 
 
 @NgModule({
     declarations: [AppComponent,LoginPage],
     entryComponents: [],
-    imports: [BrowserModule, FormsModule, IonicModule.forRoot({mode:'ios'}), AppRoutingModule,HttpClientModule,
+    imports: [BrowserModule, FormsModule, IonicModule.forRoot({mode:'ios'}), AppRoutingModule,HttpClientModule, IonicStorageModule.forRoot()
+
     ],
     providers: [
         StatusBar,

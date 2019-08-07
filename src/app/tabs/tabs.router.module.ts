@@ -14,7 +14,18 @@ const routes: Routes = [
                         path: '',
                         loadChildren: () =>
                             import('../tab1/tab1.module').then(m => m.Tab1PageModule)
-                    }
+                    },
+                    {
+                        path: 'demo1',
+                        loadChildren: () => import( '../tab1/demo/demo1/demo1.module').then(m => m.Demo1PageModule),
+                        data: {title: '营业收入'}
+                    },
+                    {
+                        path: 'demo2',
+                        loadChildren: () => import( '../tab1/demo/demo2/demo2.module').then(m => m.Demo2PageModule),
+                        data: {title: '利润'}
+                    },
+
                 ]
             },
             {
@@ -41,9 +52,12 @@ const routes: Routes = [
                 children: [
                     {
                         path: '',
-                        loadChildren: ()=>
-                            import('../user/user.module').then( m=>m.UserPageModule)
-                    }
+                        loadChildren: () =>
+                            import('../user/user.module').then(m => m.UserPageModule)
+                    },
+                    {path: 'setting', loadChildren: ()=>import('../user/setting/setting.module').then(m=>m.SettingPageModule)},
+                    {path: 'persion', loadChildren: ()=>import('../user/person/person.module').then(m=>m.PersonPageModule)},
+                    {path: 'about', loadChildren:()=>import( '../user/about/about.module').then(m=>m.AboutPageModule)},
                 ]
             },
 

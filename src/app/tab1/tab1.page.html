@@ -3,6 +3,7 @@
         <ion-title>
             应用
         </ion-title>
+        <ion-icon name="more" class="bar-btn" slot="end" (click)="presentPopover($event)"></ion-icon>
     </ion-toolbar>
 </ion-header>
 
@@ -13,7 +14,7 @@
             </ion-label>
             <ion-row *ngFor="let row of group.children">
                 <ion-col style="text-align: center;" *ngFor="let col of row" size="3">
-                    <div>
+                    <div [routerLink]="[col.url]">
                         <ion-img class="grid-img" [src]="'../../assets/img/home/'+col.img+'.png'"></ion-img>
                     </div>
                     <ion-label>
