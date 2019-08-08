@@ -38,6 +38,7 @@
     "cordova-plugin-appminimize": "1.0.1",
     "core-js": "^2.5.4",
     "crypto-js": "^3.1.9-1",
+    "di18n-translate": "0.0.9",
     "ionic-native": "^2.9.0",
     "jqwidgets-ng": "^8.1.4",
     "ng-zorro-antd-mobile": "^0.12.5",

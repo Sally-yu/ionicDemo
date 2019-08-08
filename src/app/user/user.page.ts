@@ -3,7 +3,6 @@ import {Router} from '@angular/router';
 import {AlertController} from '@ionic/angular';
 import {Storage} from '@ionic/storage';
 
-
 @Component({
     selector: 'app-user',
     templateUrl: './user.page.html',

@@ -55,12 +55,13 @@ const routes: Routes = [
                         loadChildren: () =>
                             import('../user/user.module').then(m => m.UserPageModule)
                     },
-                    {path: 'setting', loadChildren: ()=>import('../user/setting/setting.module').then(m=>m.SettingPageModule)},
-                    {path: 'persion', loadChildren: ()=>import('../user/person/person.module').then(m=>m.PersonPageModule)},
-                    {path: 'about', loadChildren:()=>import( '../user/about/about.module').then(m=>m.AboutPageModule)},
+                    {path: 'setting', loadChildren: () => import('../user/setting/setting.module').then(m => m.SettingPageModule)},
+                    {path: 'person', loadChildren: () => import('../user/person/person.module').then(m => m.PersonPageModule),},
+                    {path: 'about', loadChildren: () => import( '../user/about/about.module').then(m => m.AboutPageModule)},
+                    {path: 'card', loadChildren: () => import('../user/card/card.module').then(m => m.CardPageModule)},
+                    {path: 'profile', loadChildren: () => import('../user/profile/profile.module').then(m => m.ProfilePageModule)},
                 ]
             },
-
             {
                 path: '',
                 redirectTo: '/tabs/tab1',

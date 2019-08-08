@@ -9,9 +9,7 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   { path: 'login', component:LoginPage},
-  { path: 'popover', loadChildren: './tab1/popover/popover.module#PopoverPageModule' },
-  { path: 'popover', loadChildren: './tab2/popover/popover.module#PopoverPageModule' },
-  { path: 'popover', loadChildren: './tab3/popover/popover.module#PopoverPageModule' },
+
 
 ];
 @NgModule({
