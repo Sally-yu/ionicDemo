@@ -18,12 +18,17 @@ const routes: Routes = [
                     {
                         path: 'demo1',
                         loadChildren: () => import( '../tab1/demo/demo1/demo1.module').then(m => m.Demo1PageModule),
-                        data: {title: '营业收入'}
+                        data: {title: '文档查询'}
                     },
                     {
                         path: 'demo2',
                         loadChildren: () => import( '../tab1/demo/demo2/demo2.module').then(m => m.Demo2PageModule),
-                        data: {title: '利润'}
+                        data: {title: '工序报工'}
+                    },
+                    {
+                        path: 'demo3',
+                        loadChildren: () => import( '../tab1/demo/demo3/demo3.module').then(m => m.Demo3PageModule),
+                        data: {title: '工序检验'}
                     },
 
                 ]

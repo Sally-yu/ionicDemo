@@ -2,15 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+
 import { IonicModule } from '@ionic/angular';
 
-import { Demo1Page } from './demo1.page';
-import { jqxGridModule} from 'jqwidgets-ng/jqxgrid';
+import { Demo3Page } from './demo3.page';
+import {jqxGridModule} from 'jqwidgets-ng/jqxgrid';
 
 const routes: Routes = [
   {
     path: '',
-    component: Demo1Page
+    component: Demo3Page
   }
 ];
 
@@ -22,6 +23,6 @@ const routes: Routes = [
     jqxGridModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [Demo1Page]
+  declarations: [Demo3Page]
 })
-export class Demo1PageModule {}
+export class Demo3PageModule {}

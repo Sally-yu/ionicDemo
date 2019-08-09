@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-icon name="arrow-back" class="bar-btn" (click)="nav.back()" slot="start"></ion-icon>
+        <ion-title>工序检验</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="gray">
+    <ion-item>
+        检验员 老王
+    </ion-item>
+    <ion-item lines="none">
+        <ion-searchbar [placeholder]="'请输入搜索关键字'">
+        </ion-searchbar>
+        <ion-icon name="qr-scanner" slot="end" style="font-size: 36px;"></ion-icon>
+    </ion-item>
+    <!--<ion-item lines="none" style="position:fixed;z-index: 2;bottom: 0;width: 100%;">-->
+        <!--<ion-button style="width: 33%">保存</ion-button>-->
+        <!--<ion-button style="width: 32%" fill="outline">取消</ion-button>-->
+        <!--<ion-button style="width: 33%" fill="outline">返工返修</ion-button>-->
+    <!--</ion-item>-->
+    <div style="padding-bottom: 50px;">
+        <jqxGrid [width]="'100%'" [source]="dataAdapter" [autoheight]="true" [showheader]="false"
+                 [columns]="columns">
+        </jqxGrid>
+    </div>
+
+</ion-content>

@@ -12,9 +12,9 @@ export class Tab1Page {
     grid = [
         {
             group: '财务分析', children: [
-                [{url: 'demo1', title: '营业收入', img: 'u12'},
-                    {url: 'demo2', title: '利润', img: 'u32'},
-                    {url: '', title: '新签合同', img: 'u16'},
+                [{url: 'demo1', title: '文档查询', img: 'u12'},
+                    {url: 'demo2', title: '工序报工', img: 'u32'},
+                    {url: 'demo3', title: '工序检验', img: 'u16'},
                     {url: '', title: '两金', img: 'u28'},],
                 [{url: '', title: '经营现金净流量', img: 'u18'},
                     {url: '', title: '有息负债', img: 'u30'},

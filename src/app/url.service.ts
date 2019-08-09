@@ -10,6 +10,8 @@ export class UrlService {
     // public host = 'http://127.0.0.1:8899';
     public host = 'http://212.64.2.48:8899';
     public loginUrl = this.host + '/login';
+    public demo1grid =this.host+'/grid';
+    public demo3source =this.host+'/demo3';
 
     constructor(
         private http: HttpClient,

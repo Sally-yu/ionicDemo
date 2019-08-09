@@ -1,10 +1,27 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-icon name="arrow-back" class="bar-btn" (click)="nav.back()" slot="start"></ion-icon>
-    <ion-title>利润</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-icon name="arrow-back" class="bar-btn" (click)="nav.back()" slot="start"></ion-icon>
+        <ion-title>工序报工</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-item lines="none">
+        操作员 张三
+    </ion-item>
+    <ion-item lines="none">
+        <ion-searchbar [placeholder]="'请输入搜索关键字'">
+        </ion-searchbar>
+        <ion-icon name="qr-scanner" slot="end" style="font-size: 36px;"></ion-icon>
+    </ion-item>
+    <ion-item *ngFor="let item of forms">
+        <ion-label [position]="'fixed'" style="flex:0 0 120px;color: #505050;" >{{item.label}}</ion-label>
+        <ion-input [placeholder]="item.placeholder" [type]="item.type" [required]="item.required" [maxlength]="item.max"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-button style="width: 33%">报工</ion-button>
+        <ion-button style="width: 33%" fill="outline">取消</ion-button>
+        <ion-button style="width: 33%" fill="outline">移交</ion-button>
+    </ion-item>
 
 </ion-content>

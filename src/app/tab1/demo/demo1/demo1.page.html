@@ -1,10 +1,17 @@
 <ion-header>
   <ion-toolbar>
     <ion-icon name="arrow-back" class="bar-btn" (click)="nav.back()" slot="start"></ion-icon>
-    <ion-title>营业收入</ion-title>
+    <ion-title>文档查询</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="gray">
+  <ion-item lines="none">
+  <ion-searchbar [placeholder]="'请输入搜索关键字'">
+  </ion-searchbar>
+    <ion-icon name="qr-scanner" slot="end" style="font-size: 36px;"></ion-icon>
+  </ion-item>
+  <jqxGrid [width]="'100%'" [source]="dataAdapter" [autoheight]="true"
+           [columns]="columns">
+  </jqxGrid>
 </ion-content>

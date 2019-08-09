@@ -37,7 +37,7 @@ export class LoginPage implements OnInit {
             this.storage.set('username',res);
             this.router.navigate(['tabs']);
         },err=>{
-            this.toast.presentToast("连接服务器失败")
+            this.toast.presentToast("连接服务器失败",'danger')
         })
     }
 }
